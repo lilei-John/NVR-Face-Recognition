@@ -21,7 +21,7 @@ OBJFILE  = $(foreach dir,$(OBJS),$(notdir $(dir)))
 #.o输出到.OBJ目录下
 OBJSPATH = $(addprefix obj/,$(OBJFILE)) 
 #-lX11 编译时指定动态库的搜索路径, 在系统里添加LD_LIBRARY_PATH
-#LIBPATH = ./bin/lib/ #-Wl,-rpath=./:$(LIBPATH)HCNetSDKCom:$(LIBPATH)
+LIBPATH = ./bin/lib/ #-Wl,-rpath=./:$(LIBPATH)HCNetSDKCom:$(LIBPATH)
 LIBS = -lHCPreview -lhcnetsdk -lseeta_fa_lib -lX11 -lPlayCtrl -lpthread -lseeta_facedet_lib `pkg-config --cflags --libs opencv`
 EXE = ./bin/nvr_face_capture
 

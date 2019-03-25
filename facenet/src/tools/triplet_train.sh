@@ -1,0 +1,11 @@
+python ../train_tripletloss.py \
+--logs_base_dir ~/logs/facenet/ \
+--models_base_dir ~/models/facenet/triplet_train \
+--data_dir ~/dataset/video-faces/face_cap_cluster_aug \
+--pretrained_model ~/models/facenet/20180408-102900/model-20180408-102900.ckpt-90 \
+--image_size 160 \
+--model_def models.inception_resnet_v1 \
+--optimizer RMSPROP \
+--learning_rate 0.01 \
+--weight_decay 1e-4 \
+--max_nrof_epochs 50

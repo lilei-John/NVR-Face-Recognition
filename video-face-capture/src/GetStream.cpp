@@ -136,13 +136,28 @@ void init_detec(string model_path)
 
 void *show(void* vargp)
 {
+    const long duration = 30;
+    long show_frames = 0;
+    long red_frames = duration;
+    cv::Point running_flag_center(30,30);
     while(1)
     {
         if(is_show)
         {
-            cv::imshow("show", img_show_queue->wait_and_pop());
-            //cout<<"show"<<endl;
+            cv::Mat show_frame = img_show_queue->wait_and_pop();
+            if((++show_frames) > duration)
+            {
+                cv::circle(show_frame, running_flag_center, 10, cv::Scalar(0,0,255), -1);
+                if((--red_frames) == 0)
+                {
+                    show_frames = 0;
+                    red_frames = duration;
+                }
+            }
+
+            cv::imshow("show", show_frame); 
             cv::waitKey(10);
+            
         }
     }
 }

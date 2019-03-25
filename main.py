@@ -3,7 +3,9 @@
 
 import sys
 from subprocess import *
-from multiprocessing import Queue
+#from multiprocessing import Queue
+
+from queue import Queue
 import threading
 import signal
 import os
@@ -88,6 +90,7 @@ class Producer(threading.Thread):
             if len(data)>4 or len(data)==0:
             	continue
             sys.stderr.write("data from detect module")
+            data = data.decode()
             data=data.split("\n")[0]
             self.queue.put(data)
             sys.stderr.write("put data %s to queue \n"%str(data))
