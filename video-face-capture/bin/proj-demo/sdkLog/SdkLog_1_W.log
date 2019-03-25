@@ -1,0 +1,13 @@
+[2019-03-24 18:19:59.240][INF] The COM:Core ver is 5.3.5.2, 2017_11_24. Async:1.
+[2019-03-24 18:19:59.240][INF] This hcnetsdk ver is 5.3.5.2 Ver 2017_11_24.
+[2019-03-24 18:19:59.243][INF] login dev 10.193.5.78:8000.
+[2019-03-24 18:19:59.894][INF] Private connect 10.193.5.78:8000 sock=40 this=0xd93034 cmd=0x10000 port=51272
+[2019-03-24 18:19:59.894][INF] LogonDev1 in[10.193.5.78:8000]
+[2019-03-24 18:19:59.934][INF] AbilityAnalyze---Init-- start
+[2019-03-24 18:20:00.199][DBG] AbilityAnalyze---Init-- over, DeviceList path [/home/xuhao/project/NVR/video-face-capture/linux64/lib/HCNetSDKCom/LocalXml/DeviceList.xml], load result[0]
+[2019-03-24 18:20:00.199][INF] The COM:Preview ver is 5.3.5.2, 2017_11_24.
+[2019-03-24 18:20:00.199][INF] ID-IP-CHAN[0-10.193.5.78-1] [CPreviewSession::AdjustProtoType] StreamMode[0], StreamProtocol[0xffff]
+[2019-03-24 18:20:00.474][DBG] ID-IP-CHAN[0-10.193.5.78-1] [CPreviewSession::Start] SUCC
+[2019-03-24 18:20:00.476][INF] Private connect 10.193.5.78:8000 sock=40 this=0xd93034 cmd=0x30000 port=51274
+[2019-03-24 18:20:00.482][INF] GlobalCtrl load [.//HCNetSDKCom/libSystemTransform.so] with sdk path success and get handle[0x3c041180]
+[2019-03-24 18:20:00.482][INF] CStreamConvert::LoadConvertLib Load Succ, m_iInitCount = 1
